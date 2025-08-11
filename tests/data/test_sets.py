@@ -16,19 +16,21 @@ def target_fixture():
     return pd.Series([5, 10, 20], name="salary", copy=False)
 
 def test_pop_target_with_data_fixture(features_fixture, target_fixture):
-    df = features_fixture.copy()
-    df["salary"] = target_fixture
-    X, y = pop_target(df=df, target_col="salary")
-    pd.testing.assert_frame_equal(X, features_fixture)
-    pd.testing.assert_series_equal(y, target_fixture)
+    input_df = features_fixture.copy()
+    input_df["salary"] = target_fixture
+    features, target = pop_target(df=input_df, target_col="salary")
+    pd.testing.assert_frame_equal(features, features_fixture)
+    pd.testing.assert_series_equal(target, target_fixture)
 
 def test_pop_target_no_col_found(features_fixture):
+    input_df = features_fixture.copy()
     with pytest.raises(KeyError):
-        pop_target(df=features_fixture.copy(), target_col="salary")
+        pop_target(df=input_df, target_col="salary")
 
 def test_pop_target_col_none(features_fixture):
+    input_df = features_fixture.copy()
     with pytest.raises(KeyError):
-        pop_target(df=features_fixture.copy(), target_col=None)
+        pop_target(df=input_df, target_col=None)
 
 def test_pop_target_df_none():
     with pytest.raises(AttributeError):
