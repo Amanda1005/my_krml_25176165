@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "my_krml_25176165"
-version = "2025.0.1.1"
+version = "2025.0.2.2"
 description = "A Python package for NBA data analysis"
 authors = ["Nian-Ya,Weng"]
 license = "MIT"
