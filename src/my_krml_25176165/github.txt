@@ -1,3 +1,9 @@
+# -- GitHub repo:
+
 https://github.com/Amanda1005/my_krml_25176165
 
 https://github.com/Muska-nnnn/36120-25SP-group30-AT1
+
+# -- TestPyPI:
+
+https://test.pypi.org/project/my-krml-25176165/

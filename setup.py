@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='my_krml_25176165',
-    version='0.0.1',
+    version='2025.0.3.1',
     author='Nian-Ya,Weng',
     author_email='Nian-Ya.Weng@student.uts.edu.au',
     description='My experiment package for TestPyPI',
@@ -16,5 +16,6 @@ setup(
     ],
     python_requires='>=3.7',
 )
+
 
 
